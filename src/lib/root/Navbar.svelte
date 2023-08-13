@@ -1,8 +1,10 @@
 <script>
+  import { fade, slide } from "svelte/transition";
+  import { Menu, X } from "lucide-svelte";
   import { page } from "$app/stores";
   import Logo from "$lib/images/logo.png";
   let nav = {
-    title: "Svelte Tailwind",
+    title: "Svelte Tailwinds",
     img: Logo,
     listnavs: [
       {
@@ -11,7 +13,7 @@
       },
       {
         name: "Components",
-        link: "/components",
+        link: "/c",
       },
       {
         name: "About",
@@ -22,6 +24,7 @@
   $: isActive = $page.route.id;
 
   let isMenu = false;
+  let isMobileMenu = false;
 </script>
 
 <nav class="bg-gray-800">
@@ -31,50 +34,14 @@
         <!-- Mobile menu button-->
         <button
           type="button"
-          class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+          class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white outline-none"
           aria-controls="mobile-menu"
           aria-expanded="false"
+          on:click={() => (isMobileMenu = !isMobileMenu)}
         >
           <span class="absolute -inset-0.5" />
-          <span class="sr-only">Open main menu</span>
-          <!--
-              Icon when menu is closed.
-  
-              Menu open: "hidden", Menu closed: "block"
-            -->
-          <svg
-            class="block h-6 w-6"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            aria-hidden="true"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-            />
-          </svg>
-          <!--
-              Icon when menu is open.
-  
-              Menu open: "block", Menu closed: "hidden"
-            -->
-          <svg
-            class="hidden h-6 w-6"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            aria-hidden="true"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M6 18L18 6M6 6l12 12"
-            />
-          </svg>
+          <Menu class={isMobileMenu ? "hidden" : "block"} />
+          <X class={isMobileMenu ? "block" : "hidden"} />
         </button>
       </div>
       <div
@@ -82,12 +49,14 @@
       >
         <div class="flex flex-shrink-0 items-center">
           <img class="h-8 w-auto" src={nav.img} alt="Your Company" />
-          <h1 class="ml-1 text-lg md:text-2xl text-white font-semibold">
-            Svelte Tailwind
-          </h1>
+          <a href="/">
+            <h1 class="ml-1 text-lg md:text-2xl text-white font-semibold">
+              Svelte Tailwind
+            </h1></a
+          >
         </div>
         <div class="hidden sm:ml-6 sm:block w-full">
-          <div class="flex space-x-4 justify-center ">
+          <div class="flex space-x-4 justify-center">
             <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
 
             {#each nav.listnavs as item}
@@ -169,25 +138,12 @@
           >
             <!-- Active: "bg-gray-100", Not Active: "" -->
             <a
-              href="#"
+              href="/"
               class="block px-4 py-2 text-sm text-gray-700"
               role="menuitem"
               tabindex="-1"
-              id="user-menu-item-0">Your Profile</a
-            >
-            <a
-              href="#"
-              class="block px-4 py-2 text-sm text-gray-700"
-              role="menuitem"
-              tabindex="-1"
-              id="user-menu-item-1">Settings</a
-            >
-            <a
-              href="#"
-              class="block px-4 py-2 text-sm text-gray-700"
-              role="menuitem"
-              tabindex="-1"
-              id="user-menu-item-2">Sign out</a
+              id="user-menu-item-0"
+              >Build By <code class="text-blue-500">Sikandar.S.Bhide</code></a
             >
           </div>
         </div>
@@ -196,29 +152,19 @@
   </div>
 
   <!-- Mobile menu, show/hide based on menu state. -->
-  <div class="sm:hidden" id="mobile-menu">
-    <div class="space-y-1 px-2 pb-3 pt-2">
+  <div class="sm:hidden {isMobileMenu ? 'visible' : 'hidden'} transition-all duration-150" id="mobile-menu">
+    <div class="space-y-1 px-2 pb-3 pt-2 ">
       <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-      <a
-        href="#"
-        class="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium"
-        aria-current="page">Dashboard</a
-      >
-      <a
-        href="#"
-        class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
-        >Team</a
-      >
-      <a
-        href="#"
-        class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
-        >Projects</a
-      >
-      <a
-        href="#"
-        class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
-        >Calendar</a
-      >
+
+      {#each nav.listnavs as item}
+        <a
+          href={item.link}
+          class="{isActive === item.link
+            ? 'bg-gray-900 text-white'
+            : 'text-gray-300 hover:bg-gray-700 hover:text-white'}  block rounded-md px-3 py-2 text-base font-medium"
+          >{item.name}</a
+        >
+      {/each}
     </div>
   </div>
 </nav>
