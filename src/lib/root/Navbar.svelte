@@ -27,7 +27,7 @@
   let isMobileMenu = false;
 </script>
 
-<nav class="bg-gray-800">
+<nav class="bg-gray-800  border-b border-slate-500">
   <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
     <div class="relative flex h-16 items-center justify-between">
       <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -152,8 +152,13 @@
   </div>
 
   <!-- Mobile menu, show/hide based on menu state. -->
-  <div class="sm:hidden {isMobileMenu ? 'visible' : 'hidden'} transition-all duration-150" id="mobile-menu">
-    <div class="space-y-1 px-2 pb-3 pt-2 ">
+  <div
+    class="sm:hidden {isMobileMenu
+      ? 'visible'
+      : 'hidden'} transition-all duration-150"
+    id="mobile-menu"
+  >
+    <div class="space-y-1 px-2 pb-3 pt-2">
       <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
 
       {#each nav.listnavs as item}
