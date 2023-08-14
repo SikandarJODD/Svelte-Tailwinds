@@ -6,13 +6,13 @@
     {
       name: "Simple Navbar",
       component: Nav1,
-      code: "",
+      code: "https://github.com/SikandarJODD/Svelte-Tailwinds/blob/94f07c568206d611efeca2c8d827bdc1ac164e08/src/lib/home/navbars/Nav1.svelte",
       badgetags: ["Dark", "Responsive", "Profile"],
     },
     {
       name: "Simple Dark",
       component: Nav2,
-      code: "",
+      code: "https://github.com/SikandarJODD/Svelte-Tailwinds/blob/94f07c568206d611efeca2c8d827bdc1ac164e08/src/lib/home/navbars/Nav2.svelte",
       badgetags: ["Responsive", "Profile", "Simple"],
     },
   ];

@@ -28,7 +28,7 @@
           <Badge variant="outline" class="border-slate-800">{item}</Badge>
         {/each}
       </div>
-      <Button size="sm" href={code}>
+      <Button size="sm" href={code} target="_blank">
         Code
         <ExternalLink class="ml-2 w-4 h-4" strokeWidth="1.6px" />
       </Button>
