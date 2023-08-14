@@ -58,7 +58,6 @@
 </script>
 
 <div>
-
   <div
     class="hidden lg:fixed lg:inset-y-0 lg:top-16 lg:flex lg:w-64 lg:flex-col"
   >
@@ -89,8 +88,8 @@
     </div>
   </div>
 
-  <main class="py-10 lg:pl-72">
-    <div class="px-4 sm:px-0">
+  <main class="py-10 md:pl-64">
+    <div class="px-4">
       <!-- Your content -->
       <slot />
     </div>

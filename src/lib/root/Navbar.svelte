@@ -3,6 +3,7 @@
   import { Menu, X } from "lucide-svelte";
   import { page } from "$app/stores";
   import Logo from "$lib/images/logo.png";
+  import { split } from "postcss/lib/list";
   let nav = {
     title: "Svelte Tailwinds",
     img: Logo,
@@ -21,13 +22,14 @@
       },
     ],
   };
-  $: isActive = $page.route.id;
+  $: isActive = $page.route.id?.split("/")[1];
+  $: console.log(isActive);
 
   let isMenu = false;
   let isMobileMenu = false;
 </script>
 
-<nav class="bg-gray-800  border-b border-slate-500">
+<nav class="bg-gray-800 border-b border-slate-500 sticky top-0">
   <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
     <div class="relative flex h-16 items-center justify-between">
       <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -62,11 +64,12 @@
             {#each nav.listnavs as item}
               <a
                 href={item.link}
-                class="{isActive === item.link
+                class="{isActive === item.link.split('/')[1]
                   ? 'bg-gray-900 text-white hover:text-blue-100'
                   : 'text-gray-300 hover:bg-gray-700 hover:text-white'} rounded-md px-3 py-2 text-sm font-medium"
                 >{item.name}</a
               >
+             
             {/each}
           </div>
         </div>
@@ -164,7 +167,7 @@
       {#each nav.listnavs as item}
         <a
           href={item.link}
-          class="{isActive === item.link
+          class="{isActive === item.link.split('/')[1]
             ? 'bg-gray-900 text-white'
             : 'text-gray-300 hover:bg-gray-700 hover:text-white'}  block rounded-md px-3 py-2 text-base font-medium"
           >{item.name}</a

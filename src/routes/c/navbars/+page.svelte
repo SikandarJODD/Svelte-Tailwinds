@@ -1,1 +1,5 @@
-<h1>code navbar</h1>
+<script>
+  import AllNavs from "$lib/home/navbars/AllNavs.svelte";
+</script>
+
+<AllNavs />
