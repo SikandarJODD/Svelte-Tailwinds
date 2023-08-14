@@ -17,7 +17,7 @@
    export let code='';
 </script>
 
-<Card class="bg-gray-50 ">
+<Card class="bg-gray-50 my-5 border-slate-400">
   <CardHeader class="py-4 md:px-5">
     <CardTitle
       class="flex items-center gap-3 flex-wrap justify-center md:justify-start"
@@ -25,7 +25,7 @@
       {name}
       <div class="hidden  gap-1 md:flex">
         {#each badgetags as item}
-          <Badge variant="outline" class="border-slate-800">{item}</Badge>
+          <Badge variant="outline" class="border-slate-800 hover:bg-gray-200 cursor-pointer">{item}</Badge>
         {/each}
       </div>
       <Button size="sm" href={code} target="_blank">
@@ -35,7 +35,7 @@
     </CardTitle>
   </CardHeader>
   <CardContent class="p-2 m-0 md:mx-5 pb-4">
-    <div class="box md:p-3">
+    <div class="box md:p-3 overflow-hidden md:overflow-visible">
       <slot />
     </div>
   </CardContent>
@@ -43,7 +43,9 @@
 
 <style>
   .box {
-    border: 1px solid #ccc;
+    border: 1px solid #b1b1b1;
     border-radius: 5px;
+    background: #0b0a0a0b;
+    
   }
 </style>
