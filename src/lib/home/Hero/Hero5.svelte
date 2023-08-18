@@ -33,7 +33,7 @@
       class="px-6 pb-24 pt-10 sm:pb-32 lg:col-span-7 lg:px-0 lg:pb-56 lg:pt-48 xl:col-span-6"
     >
       <div class="mx-auto max-w-2xl lg:mx-0">
-        <div class="flex items-center gap-3">
+        <div class="flex items-center justify-center md:justify-start gap-3">
           <img class="h-11" src={hero.icon} alt="Your Company" />
           <h1 class="text-2xl md:text-3xl font-bold text-zinc-600">
             {hero.headtitle}
@@ -51,7 +51,7 @@
           </div>
         </div>
         <h1
-          class="mt-24 text-4xl font-bold tracking-tight text-gray-900 sm:mt-10 sm:text-6xl"
+          class="mt-12 text-center md:text-left text-3xl font-bold tracking-tight text-gray-900 sm:mt-10 sm:text-6xl md:mt-16"
         >
           {hero.title}
         </h1>
