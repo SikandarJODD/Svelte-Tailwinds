@@ -29,7 +29,7 @@
           {#each badgetags as item}
             <Badge
               variant="outline"
-              class="px-3  border-slate-800 hover:bg-gray-800 hover:text-white cursor-pointer"
+              class="px-3 py-1  border-slate-800 hover:bg-gray-800 hover:text-white cursor-pointer"
               >{item}</Badge
             >
           {/each}

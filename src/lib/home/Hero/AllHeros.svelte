@@ -8,25 +8,25 @@
       {
         name: "Simple Hero",
         component: Hero1,
-        code: "https://github.com/SikandarJODD/Svelte-Tailwinds/blob/94f07c568206d611efeca2c8d827bdc1ac164e08/src/lib/home/navbars/Nav1.svelte",
+        code: "https://github.com/SikandarJODD/Svelte-Tailwinds/blob/master/src/lib/home/Hero/Hero1.svelte",
         badgetags: ["Light", "Responsive"],
       },
       {
         name: "Dark Mode Hero",
         component: Hero2,
-        code: "https://github.com/SikandarJODD/Svelte-Tailwinds/blob/94f07c568206d611efeca2c8d827bdc1ac164e08/src/lib/home/navbars/Nav1.svelte",
+        code: "https://github.com/SikandarJODD/Svelte-Tailwinds/blob/master/src/lib/home/Hero/Hero2.svelte",
         badgetags: ["Dark", "Responsive"],
       },
       {
         name: "Simple Hero",
         component: Hero3,
-        code: "https://github.com/SikandarJODD/Svelte-Tailwinds/blob/94f07c568206d611efeca2c8d827bdc1ac164e08/src/lib/home/navbars/Nav1.svelte",
+        code: "https://github.com/SikandarJODD/Svelte-Tailwinds/blob/master/src/lib/home/Hero/Hero3.svelte",
         badgetags: ["Simple", "Responsive"],
       },
       {
         name: "Hero with Image",
         component: Hero4,
-        code: "https://github.com/SikandarJODD/Svelte-Tailwinds/blob/94f07c568206d611efeca2c8d827bdc1ac164e08/src/lib/home/navbars/Nav1.svelte",
+        code: "https://github.com/SikandarJODD/Svelte-Tailwinds/blob/master/src/lib/home/Hero/Hero4.svelte",
         badgetags: ["Image in Background", "Responsive"],
       },
       
