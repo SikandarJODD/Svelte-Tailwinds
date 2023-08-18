@@ -4,6 +4,7 @@
   import Hero2 from "./Hero2.svelte";
   import Hero3 from "./Hero3.svelte";
   import Hero4 from "./Hero4.svelte";
+  import Hero5 from "./Hero5.svelte";
     let allnavData = [
       {
         name: "Simple Hero",
@@ -28,6 +29,12 @@
         component: Hero4,
         code: "https://github.com/SikandarJODD/Svelte-Tailwinds/blob/master/src/lib/home/Hero/Hero4.svelte",
         badgetags: ["Image in Background", "Responsive"],
+      },
+      {
+        name: "Hero with Split Image",
+        component: Hero5,
+        code: "https://github.com/SikandarJODD/Svelte-Tailwinds/blob/master/src/lib/home/Hero/Hero5.svelte",
+        badgetags: ["Split Image", "Responsive","Image Carousel","Single Image"],
       },
       
     ];
