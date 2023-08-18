@@ -21,7 +21,7 @@
       </p>
 
       <div class="mt-8 flex flex-wrap justify-center gap-6">
-        <Button size="lg" variant="outline" href="/">
+        <Button size="lg" variant="outline" href="/c">
           <Layout strokeWidth="1.4px" class="w-7 mr-2" />
           Components</Button
         >

@@ -20,13 +20,13 @@
     {
       name: "Simple Light",
       component: Nav3,
-      code: "https://github.com/SikandarJODD/Svelte-Tailwinds/blob/94f07c568206d611efeca2c8d827bdc1ac164e08/src/lib/home/navbars/Nav2.svelte",
+      code: "https://github.com/SikandarJODD/Svelte-Tailwinds/blob/master/src/lib/home/navbars/Nav3.svelte",
       badgetags: ["Responsive", "Profile", "Light"],
     },
     {
       name: "Simple Light with New Design",
       component: Nav4,
-      code: "https://github.com/SikandarJODD/Svelte-Tailwinds/blob/94f07c568206d611efeca2c8d827bdc1ac164e08/src/lib/home/navbars/Nav2.svelte",
+      code: "https://github.com/SikandarJODD/Svelte-Tailwinds/blob/master/src/lib/home/navbars/Nav4.svelte",
       badgetags: ["Responsive", "Profile", "Light"],
     },
   ];
