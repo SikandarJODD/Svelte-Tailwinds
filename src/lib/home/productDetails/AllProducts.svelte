@@ -1,11 +1,22 @@
 <script>
     import Box from "$lib/home/Box.svelte";
   import Product1 from "./product1.svelte";
+  import Product2 from "./product2.svelte";
     
     let allnavData = [
       {
         name: "Product Details",
         component: Product1,
+        code: "https://github.com/SikandarJODD/Svelte-Tailwinds/blob/master/src/lib/home/productDetails/product1.svelte",
+        badgetags: [
+          "Responsive",
+          "Profile",
+          "Left Menu Bar",
+        ],
+      },
+      {
+        name: "Product Details",
+        component: Product2,
         code: "https://github.com/SikandarJODD/Svelte-Tailwinds/blob/master/src/lib/home/productDetails/product1.svelte",
         badgetags: [
           "Responsive",
