@@ -46,7 +46,7 @@
 <nav class="bg-white shadow">
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
     <div class="flex h-16 justify-between">
-      <div class="flex">
+      <div class="flex md:w-[80%] ">
         <div class="-ml-2 mr-2 flex items-center md:hidden">
           <!-- Mobile menu button -->
           <button
@@ -101,7 +101,10 @@
         <div class="flex flex-shrink-0 items-center">
           <img class="h-8 w-auto" src={nav.img} alt="Your Company" />
         </div>
-        <div class="hidden md:ml-6 md:flex md:space-x-8">
+          <!-- Change Justify-Start to Center, End -->
+        <div
+          class="hidden md:ml-6 md:flex md:space-x-8 w-full justify-center mr-4"
+        >
           {#each nav.listnavs as item}
             <a
               href={item.link}
@@ -213,7 +216,7 @@
   </div>
 
   <!-- Mobile menu, show/hide based on menu state. -->
-  <div class="md:hidden {isMobileMenu ? "block":"hidden"}" id="mobile-menu">
+  <div class="md:hidden {isMobileMenu ? 'block' : 'hidden'}" id="mobile-menu">
     <div class="space-y-1 pb-3 pt-2">
       {#each nav.listnavs as item}
         <a
@@ -261,7 +264,6 @@
         </button>
       </div>
       <div class="mt-3 space-y-1">
-       
         {#each profileNavs as item}
           <a
             href={item.link}

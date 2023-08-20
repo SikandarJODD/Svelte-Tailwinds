@@ -41,7 +41,7 @@
       </CardTitle>
     </CardHeader>
     <CardContent class="p-2 m-0 md:mx-5 pb-4">
-      <div class="box md:p-3 overflow-hidden md:overflow-visible">
+      <div class="box md:p-3 overflow-hidden">
         <slot />
       </div>
     </CardContent>

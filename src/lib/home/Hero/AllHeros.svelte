@@ -36,7 +36,6 @@
         code: "https://github.com/SikandarJODD/Svelte-Tailwinds/blob/master/src/lib/home/Hero/Hero5.svelte",
         badgetags: ["Split Image", "Responsive","Image Carousel","Single Image"],
       },
-      
     ];
   </script>
   

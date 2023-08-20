@@ -47,11 +47,12 @@
 <nav class="bg-gray-800">
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
     <div class="flex h-16 items-center justify-between">
-      <div class="flex items-center">
+      <div class="flex items-center w-full">
         <div class="flex-shrink-0">
           <img class="h-8 w-auto" src={nav.img} alt="Your Company" />
         </div>
-        <div class="hidden sm:ml-6 sm:block">
+        <!-- Change Justify-center to end, start -->
+        <div class="hidden sm:ml-6 sm:flex w-full  justify-center">
           <div class="flex space-x-4">
             {#each nav.listnavs as item}
               <a
@@ -198,7 +199,7 @@
   </div>
 
   <!-- Mobile menu, show/hide based on menu state. -->
-  <div class="sm:hidden {isMobileMenu ? "block":"hidden"}" id="mobile-menu">
+  <div class="sm:hidden {isMobileMenu ? 'block' : 'hidden'}" id="mobile-menu">
     <div class="space-y-1 px-2 pb-3 pt-2">
       <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
       {#each nav.listnavs as item}

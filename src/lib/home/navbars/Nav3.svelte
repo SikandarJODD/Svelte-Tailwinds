@@ -91,13 +91,10 @@
         class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start"
       >
         <div class="flex flex-shrink-0 items-center">
-          <img
-            class="h-8 w-auto"
-            src={nav.img}
-            alt="Your Company"
-          />
+          <img class="h-8 w-auto" src={nav.img} alt="Your Company" />
         </div>
-        <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
+        <!-- Change Justify-Start to End, Center -->
+        <div class="hidden sm:ml-6 sm:flex sm:space-x-8 w-full justify-start">
           {#each nav.listnavs as item}
             <a
               href={item.link}
@@ -179,7 +176,7 @@
   </div>
 
   <!-- Mobile menu, show/hide based on menu state. -->
-  <div class="sm:hidden {isMobileMenu ? "block":"hidden"}" id="mobile-menu">
+  <div class="sm:hidden {isMobileMenu ? 'block' : 'hidden'}" id="mobile-menu">
     <div class="space-y-1 pb-4 pt-2">
       {#each nav.listnavs as item}
         <a
