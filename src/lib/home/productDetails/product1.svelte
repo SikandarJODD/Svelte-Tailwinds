@@ -137,7 +137,7 @@
                 type="button"
                 class="{selectSize === i
                   ? 'bg-indigo-500 text-white'
-                  : 'bg-white hover:bg-gray-100 text-gray-800 active:bg-gray-200'} flex h-8 w-12 items-center justify-center rounded-md border bg-white text-center text-sm font-semibold transition duration-100 outline-none"
+                  : 'bg-white hover:bg-gray-100 text-gray-800 active:bg-gray-200'} flex h-8 w-12 items-center justify-center rounded-md border  text-center text-sm font-semibold transition duration-100 outline-none"
                 >{item}</button
               >
             {/each}

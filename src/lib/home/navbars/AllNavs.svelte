@@ -49,18 +49,6 @@
       code: "https://github.com/SikandarJODD/Svelte-Tailwinds/blob/master/src/lib/home/navbars/Nav5.svelte",
       badgetags: ["Responsive", "Profile", "Light"],
     },
-    // {
-    //   name: "Centered Align",
-    //   component: Nav6,
-    //   code: "https://github.com/SikandarJODD/Svelte-Tailwinds/blob/master/src/lib/home/navbars/Nav4.svelte",
-    //   badgetags: ["Responsive", "Profile", "Light"],
-    // },
-    // {
-    //   name: "Right Align",
-    //   component: Nav7,
-    //   code: "https://github.com/SikandarJODD/Svelte-Tailwinds/blob/master/src/lib/home/navbars/Nav4.svelte",
-    //   badgetags: ["Responsive", "Profile", "Light"],
-    // },
   ];
 </script>
 
